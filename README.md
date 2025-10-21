@@ -7,7 +7,7 @@ This project is created to monitor plant samples and support agricultural resear
 The system includes a simple app that can be lounched locally, on a PC, providing:
 * **Farm controls** for managing the setup
 * **Data collection** such as photos and growth metrics
-* **Automated reports** summarizing experimental results  
+* **Automated reports** summarizing experimental results
 
 # Featrures
 * **Environmental Monitoring:** Tracks key growth parameters such as air and soil temperature, air and soil humidity, and CO2 levels.

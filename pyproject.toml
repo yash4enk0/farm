@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "farm"
+version = "0.1.0"
+description = "Semi-automated farming system for plant monitoring and research"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Oleksandra Yashchenko", email = "oleksandra.yash4enk0@gmail.com"}
+]
+dependencies = [
+    "numpy>=2.0.0,<2.3.0",
+    "opencv-python>=4.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "pytest>=8.4.2",
+    "pytest-cov>=4.1.0",
+    "pre-commit>=4.3.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers --cov=src/farm --cov-report=term-missing"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["*/tests/*", "*/__init__.py"]
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
+skip_covered = false
