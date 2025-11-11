@@ -1,11 +1,4 @@
 import time
-
-""" 
-/boor/firmware/config.txt
-dtoverlay=w1-gpio,gpiopin=17,pullup=1
-"""
-
-
 def read_temp():
     with open('/sys/bus/w1/devices/28-00000056688b/w1_slave', 'r') as f:
         lines = f.readlines()
